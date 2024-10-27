@@ -5,9 +5,11 @@
 
 此仓库版本为11.0-pre2。
 
-如果需要使用此geojson编译其他版本，或不需要一级行政区的边界，请clone原版仓库，将此仓库的\GlobalQuakeCore\src\main\resources\polygons\下所有文件复制替换到clone的仓库，再进行编译
+如果需要使用此geojson编译其他版本，或不需要一级行政区的边界，请clone原版仓库，将此仓库的  `\GlobalQuakeCore\src\main\resources\polygons\`  下所有文件复制替换到clone的仓库，再进行编译
 
 当原仓库更新时，只要geojson还能适配新版本，此仓库内容不会随着原仓库的更新而更新，请按照上面的方法替换新版本的geojson。此仓库不提供任何版本编译好的jar包。
+
+编译方法：在仓库根目录下，执行  `mvn install`（中国大陆建议上代理）。编译好的文件在  `GlobalQuakeClient\target\`  下
 
 根据MIT协议：使用此仓库修改后的文件造成的任何后果，与作者无关。fork此仓库或使用此仓库修改的文件，建议注明来源（非强制）。
 
