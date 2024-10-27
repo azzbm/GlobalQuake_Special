@@ -1,7 +1,29 @@
 <h1 align="center">
   GlobalQuake
 </h1>
+此仓版本库修改了geojson中部分争议地区，新增了中国一级行政区的边界。
 
+此仓库版本为11.0-pre2。
+
+如果需要使用此geojson编译其他版本，或不需要一级行政区的边界，请clone原版仓库，将此仓库的\GlobalQuakeCore\src\main\resources\polygons\下所有文件复制替换到clone的仓库，再进行编译
+
+当原仓库更新时，只要geojson还能适配新版本，此仓库内容不会随着原仓库的更新而更新，请按照上面的方法替换新版本的geojson。此仓库不提供任何版本编译好的jar包。
+
+此仓库版本geojson效果展示:
+
+MD:
+
+<img src="https://github.com/user-attachments/assets/5cc308db-b1ae-4355-8be4-4fbf5d35a61a"/>
+
+HD:
+
+<img src="https://github.com/user-attachments/assets/a327df8c-340f-4baa-bd5e-77fa03ffefe5"/>
+
+UHD:
+
+<img src="https://github.com/user-attachments/assets/9a1b0f82-5b7e-43da-b945-dc0314b1fa45"/>
+
+<hr>
 <!--<p align="center">
   <img src="" alt="GlobalQuake icon" title="GlobalQuake" />
 </p>-->
