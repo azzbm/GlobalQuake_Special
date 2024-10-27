@@ -45,7 +45,8 @@ public class Regions {
     public static final List<Region> regionsAK = new ArrayList<>();
     public static final List<GQPolygon> raw_polygonsJP = new ArrayList<>();
     public static final List<Region> regionsJP = new ArrayList<>();
-
+    public static final List<GQPolygon> raw_polygonsCN = new ArrayList<>();
+    public static final List<Region> regionsCN = new ArrayList<>();
     public static final List<GQPolygon> raw_polygonsNZ = new ArrayList<>();
     public static final List<Region> regionsNZ = new ArrayList<>();
     public static final List<GQPolygon> raw_polygonsHW = new ArrayList<>();
@@ -62,17 +63,18 @@ public class Regions {
         parseGeoJson("polygons/countriesMD.json", raw_polygonsMD, regionsMD, NONE);
         parseGeoJson("polygons/countriesHD.json", raw_polygonsHD, regionsHD, NONE);
         parseGeoJson("polygons/countriesUHD.json", raw_polygonsUHD, regionsUHD, NONE);
-        parseGeoJson("polygons/countriesHD.json", raw_polygonsHDFiltered, regionsHDFiltered, List.of("United States", "New Zealand", "Japan"));
-        parseGeoJson("polygons/countriesUHD.json", raw_polygonsUHDFiltered, regionsUHDFiltered, List.of("United States", "Japan", "New Zealand"));
+        parseGeoJson("polygons/countriesHD.json", raw_polygonsHDFiltered, regionsHDFiltered, List.of("United States", "New Zealand", "Japan","China"));
+        parseGeoJson("polygons/countriesUHD.json", raw_polygonsUHDFiltered, regionsUHDFiltered, List.of("United States", "Japan", "New Zealand", "China"));
         parseGeoJson("polygons_converted/us-albers.geojson", raw_polygonsUS, regionsUS, List.of("Alaska", "Hawaii"));
         parseGeoJson("polygons_converted/AK-02-alaska-counties.geojson", raw_polygonsAK, regionsAK, NONE);
         parseGeoJson("polygons_converted/jp-prefectures.geojson", raw_polygonsJP, regionsJP, NONE);
+        parseGeoJson("polygons_converted/cn-prefectures.geojson", raw_polygonsCN, regionsCN, NONE);
         parseGeoJson("polygons_converted/new-zealand-districts.geojson", raw_polygonsNZ, regionsNZ, NONE);
         parseGeoJson("polygons_converted/hawaii-countries.geojson", raw_polygonsHW, regionsHW, NONE);
         parseGeoJson("polygons_converted/italy_provinces.geojson", raw_polygonsIT, regionsIT, NONE);
         parseGeoJson("polygons_converted/region_dataset.geojson", null, regionSearchHD, NONE);
 
-        for(List<Region> list : List.of(regionsUS, regionsAK, regionsJP, regionsNZ, regionsHW, regionsIT)){
+        for(List<Region> list : List.of(regionsUS, regionsAK, regionsJP, regionsNZ, regionsHW, regionsIT, regionsCN)){
             regionSearchHD.addAll(list);
         }
 
